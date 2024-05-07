@@ -29,7 +29,7 @@ public class MainController {
                 new Person("3", "Jane", "Kite", "1993-11-21", "Philippines", "f"),
                 new Person("4", "Tylor", "Moe", "1979-10-14", "Malaysia", "f"),
                 new Person("5", "May", "Locks", "1983-06-17", "Indonesia", "m"));
-        model.addAttribute("title", "List of Persons");
+        model.addAttribute("title", "List of People");
         model.addAttribute("showFullDetails", showFullDetails);
         model.addAttribute("people", people);
         return "people";

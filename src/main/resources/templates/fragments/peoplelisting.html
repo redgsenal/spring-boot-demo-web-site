@@ -1,0 +1,36 @@
+<body>
+    <section>
+        <h1 th:text="${title}" />
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th:block th:if="${showFullDetails}">
+                        <th>Date of Birth</th>
+                        <th>Country</th>
+                        <th>Gender</th>
+                    </th:block>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="person: ${people}">
+                    <td th:text="${person.id}" />
+                    <td th:text="${person.firstName}" />
+                    <td th:text="${person.lastName}" />
+                    <th:block th:if="${showFullDetails}">
+                        <td th:text="${person.dateOfBirth}" />
+                        <td th:text="${person.country}" />
+                        <td th:if="${person.gender == 'f'}">Female</td>
+                        <td th:unless="${person.gender == 'f'}">Male</td>
+                        </th:if>
+                    </th:block>
+                </tr>
+            </tbody>
+
+        </table>
+    </section>
+    <footer th:replace="fragments/footer :: footer" />
+    <script src="/js/main.js"></script>
+</body>

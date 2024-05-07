@@ -1,0 +1,11 @@
+<body>
+    <section>
+        <h1 th:text="${title}"/>
+        <p th:class="highlight">This has a hightlight...</p>
+        <img th:class="logo" src="/images/logo-01.png" alt="This Sample image 1"/>
+        <img th:class="image50" src="/images/image1.jpg" alt="Alt for Sample image 2"/>
+    </section>
+
+    <footer th:replace="fragments/footer :: footer"/>
+    <script src="/js/main.js"></script>
+</body>
