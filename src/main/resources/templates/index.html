@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title th:text="${title}"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+    <section>
+        <h1 th:text="${title}"/>
+        <p th:class="highlight">This has a hightlight...</p>
+        <img th:class="image50" src="/images/image1.jpg" alt="Sample only"/>
+        <img th:class="image50" src="/images/image1.jpg" alt="Sample only"/>
+    </section>
+    <footer>
+        <p th:text="${year}"/>
+    </footer>
+    <script src="/js/main.js"></script>
+</body>
+</html>
